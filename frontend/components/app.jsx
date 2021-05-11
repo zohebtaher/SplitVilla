@@ -2,17 +2,21 @@ import React from 'react';
 import SignupContainer from './session/signup_container';
 import NavBarContainer from './navbar/nav_bar_container';
 import LoginFormContainer from './session/login_form_container';
-import { AuthRoute, ProtectedRoute } from '../utils/routes_util'
+import { AuthRoute, ProtectedRoute } from '../utils/routes_util';
+import { Route } from 'react-router-dom'
+import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
     <div>
-        <header>
-            <NavBarContainer/>
-            <p>Hello App</p> 
-        </header>
-        <AuthRoute path='/signup' component={SignupContainer} />
-        <AuthRoute path='/login' component={LoginFormContainer} />
+        <h1>This is from APP</h1>
+        <GreetingContainer/>
+        <Route path="/login" component={LoginFormContainer} />
+    <Route path="/signup" component={SignupContainer} />
+        {/* <AuthRoute path='/signup' component={SignupContainer} />
+        <AuthRoute path='/login' component={LoginFormContainer} /> */}
     </div>
 );
+
+
 
 export default App;

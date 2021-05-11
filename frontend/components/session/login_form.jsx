@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
     }
     render () {
         return (
-            <div classname= "putsomthinghere">
+            <div >
                 <h1>SplitVilla</h1>
                 <form onSubmit = {this.handlesubmit} >
                     <label>Email:
