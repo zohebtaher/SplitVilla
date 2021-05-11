@@ -1,5 +1,5 @@
 {
-  "name": "Splitvilla",
+  "name": "splitvilla",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.14.0",
