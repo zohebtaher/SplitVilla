@@ -1,14 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {signup,login, logout } from './util/session_api_util'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {signUp,logIn, logOut } from './utils/session_api_util';
+import Root from './components/root';
+import configureStore from './store/store'
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const root = document.getElementById("root")
+    let preloadedState = undefined;
+    if (window.currentUser) {
+        preloadedState = {
+            session: {
+                currentUser: window.currentUser
+            }
+        };
+    }
+    const store = configureStore(preloadedState);
 
     // testing 
-        window.login = login;
-        window.signup = signup;
-        window.logout = logout;
+        // window.logIn = logIn;
+        // window.signUp = signUp;
+        // window.logOut = logOut;
 
-    ReactDOM.render( <h1>Test SplitVilla</h1>, root)
+       
+
+    ReactDOM.render( <Root store={store}/>, root)
 })
