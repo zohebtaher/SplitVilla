@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+ 
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
@@ -19,8 +20,8 @@ class LoginForm extends React.Component {
 
     displayErrors() {
         return (
-            <div>
-                <h3>Wrong Email or Password.Please try again</h3>
+            <div className='login-errors'>
+                <h3>Whoops! We couldn’t find an account for that email address and password. Maybe you’ve forgotten your password?</h3>
                 <button onClick={()=> this.props.clearErrors()}>x</button>
             </div>
         )
@@ -45,24 +46,33 @@ class LoginForm extends React.Component {
     }
     render () {
         return (
-            <div >
+            <div className='login-form-container' >
+                <Link to ='/'><img src={window.logo} /></Link>
                 {this.props.errors.length === 0 ? null: <div>{this.displayErrors()}</div>}
-                <h1>SplitVilla</h1>
-                <div>
+                <div className='login-form'>
+                <h1>Log in</h1>
+                <br />
+                <br />
+
                 <form onSubmit = {this.handlesubmit} >
-                    <label>Email:
+                    <label><h2>Email address:</h2></label>
+                    <br />
                         <input type="text"
                          value={this.state.email} 
                          onChange={this.handleInput('email')}
                         />
-                    </label>
-                    <label>Password:
+                    <br />
+
+                    <br />
+                    <label><h2>Password:</h2></label>
+                    <br />
                         <input type="password"
                          value={this.state.password} 
                          onChange={this.handleInput('password')}
                          />
-                    </label>
-                    <button type='submit'>Log in</button>
+                    <br />
+                    <br />
+                    <button className='orange-button' type='submit'>Log in</button>
                     <p>or</p>
                     <button onClick ={this.demoLogin}>Demo User</button>
                 </form>

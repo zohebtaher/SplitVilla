@@ -1,0 +1,57 @@
+.greetingbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.greeting-right {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.greetingbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.greeting-right .login-button, .greeting-right .green-button {
+    padding: 10px 20px 10px 20px;
+}
+
+.green-button:hover {background-color: #1CC29F}
+
+.green-button:active {
+  background-color: #1CC29F;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.login-button {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #1CC29F;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background: #ffffff;
+  text-decoration: none;
+}
+
+.greetingbar > a {
+    padding: 15px 10px 10px;
+  color: black;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-family: Arial;
+}

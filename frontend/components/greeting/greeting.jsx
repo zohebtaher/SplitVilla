@@ -10,18 +10,23 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="greeting-right">
         <ul>
           <li><Link className='login-button' to="/login">Login</Link></li>
-          <p>or</p>
+          
           <li><Link className='green-button' to="/signup">Sign up!</Link></li>
         </ul>
       </div>
     </div>
   );
   const personalGreeting = () => (
-      <div className='greetingbar'>
-        <Link to='/'>Splitvilla</Link>
+      <div className='greetingbar-personal'>
+        <ul>
+        <li><Link to='/'>Splitvilla</Link></li>
+        <li><Link to ='/'><img src={window.logo} /></Link></li>
+        </ul>
         <div className="greeting-right">
-          <p>Hello {currentUser.username}!</p>
-          <button className="green-button" onClick={logout}>Log Out</button>
+          <ul>
+          <li><p>Hello {currentUser.username}!</p></li>
+          <li><button className="green-button" onClick={logout}>Log Out</button></li>
+          </ul>
         </div>
       </div>
   );

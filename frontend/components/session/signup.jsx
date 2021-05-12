@@ -20,7 +20,7 @@ class Signup extends React.Component {
     showErrors() {
         return (
             <div className='signup-errors'>
-                <h2>List of errors:</h2>
+                <h2>The following errors occured:</h2>
                 <ul>
                     {this.props.errors.map((error,idx)=>(
                         <li key={idx}>
@@ -45,8 +45,8 @@ class Signup extends React.Component {
     }
     render () {
         return (
-            <div className='login-signup-form-container'>
-                <Link to='/'>img src</Link>
+            <div className='signup-form-container'>
+                <Link to ='/'><img src={window.logo} /></Link>
                 <div className='signup-form'>
                     {this.props.errors.length === 0 ? null : <div>{this.showErrors()}</div> }
                     <h1>INTRODUCE YOURSELF</h1>
