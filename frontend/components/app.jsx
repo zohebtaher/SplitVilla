@@ -9,9 +9,8 @@ import GreetingContainer from './greeting/greeting_container';
 const App = () => (
     <div>
         <h1>This is from APP</h1>
-        <Route path='/' component={GreetingContainer}/>
-        {/* <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupContainer} /> */}
+       <GreetingContainer/>
+      
         <AuthRoute path='/signup' component={SignupContainer} />
         <AuthRoute path='/login' component={LoginFormContainer} />
     </div>
