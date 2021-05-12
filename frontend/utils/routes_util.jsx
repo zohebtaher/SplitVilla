@@ -6,18 +6,20 @@ const mSTP = state => ({
     loggedIn: Boolean(state.session.id)
 });
 
-const Auth =({component: Component, path, loggedIn}) => (
+const Auth =({component: Component, path, loggedIn, exact}) => (
     <Route
     path= {path}
+    exact= {exact}
     render= {props => (
         loggedIn ? <Redirect to="/"/> : <Component {...props}/>
     )}
     />
 )
 
-const Protected = ({ component: Component, path, loggedIn}) => (
+const Protected = ({ component: Component, path, loggedIn, exact}) => (
     <Route
         path = {path}
+        exact = {exact}
         render = {props => (
             loggedIn ? <Component {...props} /> : <Redirect to='/signup'/>
         )}
