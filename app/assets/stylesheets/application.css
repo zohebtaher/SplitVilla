@@ -74,29 +74,5 @@ table {
     text-decoration: none;
 }
 
-.green-button:hover {background-color: #1CC29F}
-
-.green-button:active {
-  background-color: #1CC29F;
-  box-shadow: 0 2px #666;
-  transform: translateY(4px);
-}
-
-.login-button {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #1CC29F;
-  font-size: 20px;
-  background: #ffffff;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.login-button:hover {
-  background: #ffffff;
-  text-decoration: none;
-}
 
 
