@@ -1,5 +1,5 @@
 class API::RequestsController < ApplicationController
-    before_action :require_logged_in, only [:create, :destroy]
+    before_action :require_logged_in, only: [:create, :destroy]
 
     def index 
         @requests = Request.where(receiver_id: params[:user_id])
