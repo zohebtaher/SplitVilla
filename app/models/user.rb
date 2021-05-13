@@ -10,6 +10,26 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize  :ensure_session_token
 
+        has_many :requests_as_requestor,
+            foreign_key: :requestor_id,
+            class_name: :Request,
+            dependent: :destroy
+        
+        has_many :requests_as_receiver,
+            foreign_key: :receiver_id,
+            class_name: :Request,
+            dependent: :destroy
+
+        has_many :friendships,
+            foreign_key: :user_id,
+            class_name: :Friendship,
+            dependent: :destroy
+
+        has_many :friends,
+            through: :friendships,
+            dependent: :destroy
+
+
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
         return nil unless user

@@ -1,5 +1,0 @@
-class Friend < ApplicationRecord
-
-    
-
-end
