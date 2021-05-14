@@ -24,7 +24,7 @@ export const clearSessionErrors = () => ({
     type: CLEAR_SESSION_ERRORS
 })
 
-
+//Thunk Action Creators
 
 export const createNewUser = formUser => dispatch => signUp(formUser)
     .then(user => dispatch(receiveCurrentUser(user)),

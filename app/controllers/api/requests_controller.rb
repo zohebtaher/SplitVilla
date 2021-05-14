@@ -1,4 +1,4 @@
-class API::RequestsController < ApplicationController
+class Api::RequestsController < ApplicationController
     before_action :require_logged_in, only: [:create, :destroy]
 
     def index 

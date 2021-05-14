@@ -1,4 +1,4 @@
-class API::FriendshipsController < ApplicationController
+class Api::FriendshipsController < ApplicationController
     before_action :require_logged_in, only: [:create, :index]
 
     def index 
@@ -9,7 +9,7 @@ class API::FriendshipsController < ApplicationController
     def create
         
         @friendship1 = Friendship.new(req_params)  #user_id: user_id, friend_id: friend_d
-        @friendship2 = Friendship.new(user_id: req_params.dig(:friend_id), friend_id: req_param.dig(:user_id))
+        @friendship2 = Friendship.new(user_id: req_params.dig(:friend_id), friend_id: req_params.dig(:user_id))
         @request = Request.find_by(receiver_id: req_params.dig(:user_id), requestor_id: req_params.dig(:friend_id))
 
             if @friendship1.save && @friendship2.save
