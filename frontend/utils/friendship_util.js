@@ -15,7 +15,7 @@ export const deleteFriendship = userId => (
 
 export const fetchFriendships = userId => (
     $.ajax({
-        url: `/api/users/${userId}/friendships`
+        url: `/api/users/${userId}/friendships`,
         method: 'GET'
     })
 )

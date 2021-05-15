@@ -1,4 +1,4 @@
-import {signUp, logIn, logOut} from '../utils/session_api_util'
+import {signUp, logIn, logOut} from '../utils/session_api_util';
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
@@ -14,6 +14,8 @@ const logoutCurrrentUser = () =>({
     type: LOGOUT_CURRENT_USER,
 
 });
+
+
 
 export const receiveSessionErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
@@ -37,3 +39,5 @@ export const logInUser = formUser => dispatch => logIn(formUser)
 export const logOutUser = () => dispatch => logOut()
     .then(() => dispatch(logoutCurrrentUser()),
            errors => dispatch(receiveSessionErrors(errors.responseJSON)));
+
+
