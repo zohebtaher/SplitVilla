@@ -20,7 +20,7 @@ const Greeting = ({ currentUser, logout }) => {
       <div className='greetingbar-personal'>
         <ul>
         <li><Link to='/'>Splitvilla</Link></li>
-        <li><Link to ='/'><img src={window.logo} /></Link></li>
+        <li><Link to ='/'><img height="30px" src={window.logo} /></Link></li>
         </ul>
         <div className="greeting-right">
           <ul>

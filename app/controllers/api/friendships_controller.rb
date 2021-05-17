@@ -22,8 +22,8 @@ class Api::FriendshipsController < ApplicationController
 
 
     def destroy 
-        @receiver_side = Friendship.find_by(user_id: Friendship.find_by(id: params[:id].user_id))
-        @friend_side = friendship.find_by(friend_id: Friendship.find_by(id: params[:id].user_id))
+        @receiver_side = Friendship.find_by(user_id: Friendship.find_by(id: params[:id]))
+        @friend_side = friendship.find_by(friend_id: Friendship.find_by(id: params[:id]))
             if @receiver_side.destroy && @friend_side.destroy 
                 @friendships = Friendship.where(user_id: current_user.id)
                 render 'api/friendships/index'

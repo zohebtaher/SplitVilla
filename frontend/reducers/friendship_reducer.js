@@ -11,7 +11,7 @@ const friendshipReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
         case ACCEPT_FRIENDSHIP:
-            return Object.assign({},state, action.friendip)
+            return Object.assign({},state, action.friendship)
         case RECEIVE_USER_FRIENDSHIPS:
             return Object.assign({}, state, action.friendships)
         case REMOVE_FRIENDSHIP:
