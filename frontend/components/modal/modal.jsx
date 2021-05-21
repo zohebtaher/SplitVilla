@@ -1,36 +1,43 @@
-import React from 'react';
-import AllUsersContainer from '../users/all_users_container'
-
+import React from "react";
+import AllUsersContainer from "../users/all_users_container";
+import NewBillContainer from "../bills/new_bill_container";
+import EditBillContainer from "../bills/edit_bill_container"
 
 class Modal extends React.Component {
-    constructor(props){
-        super(props)
-}
+  constructor(props) {
+    super(props);
+  }
 
-stopProp(e) {
+  stopProp(e) {
     e.stopPropagation();
-}
+  }
 
-render() {
+  render() {
     if (!this.props.modal) {
-        return null
-    };
+      return null;
+    }
     let component = null;
-    switch(this.props.modal.formName) {
-        case 'addFriend':
-            component = <AllUsersContainer/>
-            break;
-        // 
-        // 
-        default:
-            return null;
+    switch (this.props.modal.formName) {
+      case "addFriend":
+        component = <AllUsersContainer />;
+        break;
+      case "newBill":
+        component = <NewBillContainer />;
+        break;
+      case "editBill":
+        component = <EditBillContainer billId={this.props.modal.objectId}/>;
+        break;
+      default:
+        return null;
     }
     return (
-        <div className = 'modal-background' onClick={this.props.closeModal}>
-            <div className='modal-child' onClick={this.stopProp}>{component}</div>
+      <div className="modal-background" onClick={this.props.closeModal}>
+        <div className="modal-child" onClick={this.stopProp}>
+          {component}
         </div>
-    )
-    }
+      </div>
+    );
+  }
 }
 
 export default Modal;

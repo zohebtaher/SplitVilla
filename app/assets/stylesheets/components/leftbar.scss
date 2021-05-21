@@ -1,0 +1,77 @@
+.leftbar-top {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 5px;
+  background: #f6f6f6;
+  color: #ccc;
+  font-size: 11px;
+  margin-top: 5px;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #eee;
+  padding: 4px 5px;
+  text-rendering: optimizeLegibility;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 158px;
+}
+
+.leftbar-top:hover {
+  background: #eee;
+  color: #999;
+  border-top-color: #e9e9e9;
+  border-bottom-color: #e6e6e6;
+}
+
+#accept-add-link {
+  color: #ccc;
+  font-size: 25px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+#accept-add-link:hover {
+  color: #5bc5a7;
+  cursor: pointer;
+}
+
+.leftbar-nav {
+  
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  
+}
+
+.left-dash-link {
+  margin: 11px 0 0;
+  padding: 3px 8px 5px 5px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.dashboad-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.dashboard-links .dash-links {
+  color: #48be9d;
+  font-size: 42px;
+  border-bottom: 3px;
+  
+}
+
+.dashboard-links .dash-links :hover {
+  color: #54bfa1;
+  padding-bottom: 3px;
+  border-bottom: 0px;
+  padding-top: 7px;
+}
+
+.dashboard-links a {
+  padding: 9px;
+}

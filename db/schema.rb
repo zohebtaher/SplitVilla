@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_13_171305) do
+ActiveRecord::Schema.define(version: 2021_05_19_135345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,14 +21,15 @@ ActiveRecord::Schema.define(version: 2021_05_13_171305) do
     t.integer "ower_id", null: false
     t.string "description", null: false
     t.string "category", null: false
-    t.boolean "split", null: false
+    t.boolean "split_equally", null: false
     t.string "lender_paid", null: false
     t.string "lender_owed", null: false
     t.string "ower_paid", null: false
     t.string "ower_owed", null: false
-    t.boolean "settled", null: false
+    t.boolean "settle_up", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "amount"
     t.index ["lender_id"], name: "index_bills_on_lender_id"
     t.index ["ower_id"], name: "index_bills_on_ower_id"
   end

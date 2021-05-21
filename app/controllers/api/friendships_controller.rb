@@ -8,11 +8,11 @@ class Api::FriendshipsController < ApplicationController
 
     def create
         
-        @friendship1 = Friendship.new(req_params)  #user_id: user_id, friend_id: friend_d
+        @friendship = Friendship.new(req_params)  #user_id: user_id, friend_id: friend_d
         @friendship2 = Friendship.new(user_id: req_params.dig(:friend_id), friend_id: req_params.dig(:user_id))
         @request = Request.find_by(receiver_id: req_params.dig(:user_id), requestor_id: req_params.dig(:friend_id))
 
-            if @friendship1.save && @friendship2.save
+            if @friendship.save && @friendship2.save
                 @request.destroy
                 render '/api/friendships/show', status: 201
             else

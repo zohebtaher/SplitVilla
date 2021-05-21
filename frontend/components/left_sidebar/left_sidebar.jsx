@@ -1,42 +1,62 @@
-import React from 'react';
-import { withRouter, NavLink } from 'react-router-dom';
-
+import React from "react";
+import { withRouter, NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Friendship from "../friendships/friendship_container";
+import { Switch, Route, Link } from "react-router-dom";
+import BillIndexContainer from "../bills/bill_index_container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 class LeftSidebar extends React.Component {
-    constructor(props) {
-        super(props);
-    
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            ui: { modal: null}
-        };
-    }
+    this.state = {
+      ui: { modal: null },
+    };
+  }
 
-    componentDidMount() {
-        this.props.fetchAllUsers();
-    }
+  componentDidMount() {
+    this.props.fetchFriendships(this.props.currentUserId);
+  }
 
-    render() {
+  // componentWillUnmount() {
+  //   this.props.clearFriendships();
+  // }
 
-        return (
-            <div className='left-sidebar-links'>
-                <NavLink to="/dasboard" id="ls-dashboard-link"><img height="16px" src={window.logo}/>Dashboard</NavLink>
-                {/* <NavLink to="/recent" id="ls-recent-link"><i className="fas fa-flag><i>Recent activity</NavLink>" */}
-                {/* <NavLink to="/all" id="ls-all-link"><i className="fas fa-list"></i> All expenses</NavLink> */}
-                <br />
-                <br />
-                
-                <div  className="ls_header">
-                    <span>FRIENDS</span>
-                    <br />
-                    <br />
-                    <a id="add-friend-link" onClick={()=> this.props.openModal('addFriend')}><i className="fas fa-plus fa-sm"></i>add</a>
-                    
+  render() {
+    // const currentUser= this.props.currentUser
+    // const currentUserId = this.propsCurrentUserId
+    // const friendships = this.props.fetchFriendships(this.props.currentUserId);
 
-                </div>
-            </div>
-        );
-    }
+    return (
+      <div className="leftbar-nav">
+        <div className="leftbar-top">
+          <span> ADD/ACCEPT FRIENDS</span>
+          <a id="accept-add-link"
+            onClick={() => this.props.openModal("addFriend")}
+          >
+            <i className="fas fa-plus fa-sm"></i>add
+          </a>
+        </div>
+        <div className="dashboard-links">
+            <a
+              href="https://www.linkedin.com/in/mohammad-taher-2b502b5b"
+              target="_blank"
+            >
+              <FontAwesomeIcon className="dash-links" icon={faLinkedin} />
+            </a>
+            <a href="https://github.com/zohebtaher" target="_blank">
+              <FontAwesomeIcon className="dash-links" icon={faGithubSquare} />
+            </a>
+          </div>
+        <div className="friend Index">
+          <Friendship />
+        </div>
+       
+      </div>
+    );
+  }
 }
 
 export default withRouter(LeftSidebar);

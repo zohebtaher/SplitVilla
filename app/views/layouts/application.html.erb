@@ -4,14 +4,28 @@
     <title>Splitvilla</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script>
     window.logo = '<%= image_url('splitvillalogo2.png')  %>'
     window.credit= '<%= image_url('splash-credit.jpg')  %>'
+    window.splash1= '<%= image_url('splash1.png') %>'
+    window.splash2= '<%= image_url('splash2.png') %>'
+    window.splash3= '<%= image_url('splash3.png') %>'
+    window.splash4= '<%= image_url('splash4.png') %>'
+    window.iphonelogo= '<%= image_url('logoiphone.png')  %>'
+    window.androidlogo= '<%=image_url('logoandroid') %>'
     </script>
    <script src="https://kit.fontawesome.com/caffe9fab8.js"></script>
+
+   <% if logged_in? %>
+      <script type="text/javascript">
+          window.currentUser =
+            <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+      </script>
+    <% end %>
   </head>
 
   <body>
