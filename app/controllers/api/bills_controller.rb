@@ -13,6 +13,7 @@ class Api::BillsController < ApplicationController
                     errors.push("enter an amount please")
                 end
               end
+              render json: errors, status: 402
             end
     end
 
