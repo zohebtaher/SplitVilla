@@ -51,7 +51,7 @@ class Splash extends React.Component {
             <p>Quickly add expenses on the go before you forget who paid</p>
             <img src={window.splash3} alt="splash image" />
           </li>
-          <li className="black-splash">
+          <li className="brown-splash">
             <h1>Pay friends back</h1>
             <p>Settle up with a friend and record any cash or online payment</p>
             <img src={window.splash4} alt="splash image" />

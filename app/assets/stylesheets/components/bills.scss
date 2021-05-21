@@ -41,3 +41,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.bill-index-item-button button {
+    -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 18px;
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 17px;
+  background: #d93455;
+  padding: 6px 10px 6px 10px;
+  text-decoration: none;
+}

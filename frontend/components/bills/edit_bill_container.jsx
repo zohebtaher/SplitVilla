@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import EditBillForm from "./edit_bill_form";
-import { updateBill, getAllBills } from "../../actions/bill_action";
+import { updateBill, getAllBills, clearBillErrors } from "../../actions/bill_action";
 import { closeModal } from "../../actions/modal_actions";
 import React from "react";
 import { evenSplit } from "../../utils/bill_splitting_util"
@@ -37,7 +37,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => ({
     processBill: (billId,bill) =>dispatch(updateBill(billId, bill)),
     closeModal: () => dispatch(closeModal()),
-    getAllBills: () => dispatch(getAllBills())
+    getAllBills: () => dispatch(getAllBills()),
+    clearErrors: () => dispatch(clearBillErrors())
 
 })
 

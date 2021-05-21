@@ -17,6 +17,9 @@ class BillForm extends React.Component {
     this.props.processBill(this.state).then(() => this.props.closeModal());
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
   handleSelect() {
     return (e) => {
       let currentFriend = { friendId: "", userName: "" };
