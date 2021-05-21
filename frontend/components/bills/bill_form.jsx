@@ -14,7 +14,7 @@ class BillForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processBill(this.state).then(()=>this.props.getAllBills()).then(() => this.props.closeModal());
+    this.props.processBill(this.state).then(() => this.props.closeModal());
   }
 
   handleSelect() {
