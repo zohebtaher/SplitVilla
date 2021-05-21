@@ -65,9 +65,9 @@ class BillForm extends React.Component {
       <div className="form-errors">
         <h2>The following errors occured:</h2>
         <ul>
-          {this.props.errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
+          <li>Enter a description please </li> 
+            <li>Enter an amount please</li>
+          
         </ul>
         <button
           className="button-orange"
