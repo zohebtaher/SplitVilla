@@ -5,7 +5,14 @@ class Api::BillsController < ApplicationController
             if @bill.save
                 render :show
             else 
-              render json: @bill.errors.full_messages, status: 402
+              errors = []
+              @bill.errors.full_messages.each do |error|
+                if error == "Description can't be blank"
+                    errors.push("enter a description please")
+                elsif error == "Amount can't be blank"
+                    errors.push("enter an amount please")
+                end
+              end
             end
     end
 
