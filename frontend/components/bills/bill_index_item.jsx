@@ -55,7 +55,7 @@ class BillIndexItem extends React.Component {
                 </div>
                 <div className="bill-index-item-header-lent">
                   <h4>
-                    {borrower} owe {payer} {amountLent}
+                    {borrower} owes {payer} {amountLent}
                   </h4>
                   
                 </div>
