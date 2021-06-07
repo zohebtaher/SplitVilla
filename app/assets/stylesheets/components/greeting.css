@@ -3,10 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 100%;
+  width: 99%;
   height: 45px;
   background-color: #5bc5a7;
   font-family: "Lato", sans-serif;
+  margin-right: 10px;
 }
 
 .greeting-right {
@@ -17,6 +18,7 @@
 .greetingbar ul {
   display: flex;
   justify-content: space-between;
+  /* margin-right: 10px; */
 }
 
 .greeting-right .login-button,
@@ -52,8 +54,8 @@
   padding: 15px 10px 10px;
   color: black;
   margin-left: 10px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 39px;
+  font-weight: 900;
   letter-spacing: 1px;
   text-decoration: none;
   font-family: "Lato";
@@ -95,6 +97,7 @@
 
 .signup-button {
   margin-left: 5px;
+
   font-size: 14px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
@@ -122,9 +125,8 @@
   margin-right: 10px;
 }
 
-
-.splitvilla-dashboard  {
-   padding: 15px 10px 10px;
+.splitvilla-dashboard {
+  padding: 15px 10px 10px;
   color: rgb(126, 124, 124);
   font-size: 25px;
   font-weight: 700;
@@ -134,11 +136,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 
 .top-dashboard-right {
   display: flex;
   justify-content: space-around;
-  align-items: flex-end ;
+  align-items: flex-end;
 }

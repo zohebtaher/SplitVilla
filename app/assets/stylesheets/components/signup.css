@@ -99,7 +99,7 @@
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-color: #e6e8ee;
-  font-family: Montserrat;
+  /* font-family: Montserrat; */
   box-sizing: inherit;
   width: 500px;
   margin: auto;
@@ -126,7 +126,6 @@
 .login-holder {
   display: flex;
   justify-content: center;
-  
 }
 
 .login-form {

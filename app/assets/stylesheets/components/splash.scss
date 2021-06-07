@@ -20,6 +20,7 @@
 
 .main-top img {
   width: 40%;
+  // height: 70%;
   margin: auto;
   border-radius: 10px;
 }
@@ -165,11 +166,14 @@
 }
 
 .orange-splash {
-  background-image: linear-gradient(#ff652f,#f87141);
+  background-image: linear-gradient(#ff652f, #f87141);
 }
 
 .brown-splash {
-  background-image: linear-gradient(rgba(51, 21, 3, 0.918),rgba(42, 17, 2, 0.918) );
+  background-image: linear-gradient(
+    rgba(51, 21, 3, 0.918),
+    rgba(42, 17, 2, 0.918)
+  );
 }
 
 .visuals-body h1 {
@@ -180,9 +184,59 @@
   font-family: "Lato";
 }
 
-.visuals-body p{
+.visuals-body p {
   font-size: 24px;
   font-weight: 700;
   padding-top: 30px;
   padding-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #5bc5a7;
+}
+
+.footer h3 {
+  font-size: 33px;
+  font-weight: 700;
+  // padding-left: 28px;
+  font-family: "Lato";
+}
+
+.footer h1 {
+  font-size: 15px;
+  font-weight: 100;
+  // padding-left: 28px;
+  font-family: "Lato";
+  color: rgb(233, 233, 233);
+}
+
+.footer ul {
+  font-size: 20px;
+  font-weight: 500;
+  // padding-left: 28px;
+  font-family: "Lato";
+  color: rgb(233, 233, 233);
+}
+
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  color: rgb(233, 233, 233);
+  font-size: 60px;
+}
+.footer-description .footer-info-links {
+  color: black;
+}
+.footer-description h4 {
+  font-size: 15px;
+  font-weight: 500;
+  // padding-left: 28px;
+  font-family: "Lato";
+}
+
+.footer li {
+  color: rgb(233, 233, 233);
 }

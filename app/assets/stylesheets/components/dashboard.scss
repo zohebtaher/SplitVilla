@@ -1,37 +1,33 @@
 .dashboard-container {
-    
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 50px;
-    color: #999999;
-    font-family: "Lato"
-    
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  top: 50px;
+  color: #999999;
+  font-family: "Lato";
 }
 
 .main-center {
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: calc(74.938% - 30px);
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    margin: 0 15px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
-    height: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin: 0 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 1500px;
 }
 
-
-.dash-top-content{
-    display: flex;
-    justify-content: space-between;
-    background-color:#ccc;
-    border-bottom: 2px solid #999999;
-    align-items: baseline;
+.dash-top-content {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  border-bottom: 2px solid #999999;
+  align-items: baseline;
 }
-
 
 .dashboard-text {
   color: rgb(26, 26, 26);
@@ -39,12 +35,12 @@
   font-weight: 700;
   letter-spacing: 1px;
   margin-left: 5px;
-  
+
   font-family: "Lato";
 }
 
- .button-orange{ 
-    border-radius: 4px;
+.button-orange {
+  border-radius: 4px;
   color: white;
   background-color: #ff652f;
   text-shadow: #c83400;
@@ -52,6 +48,5 @@
   font-size: 19px;
   margin-right: 5px;
   display: inline-block;
-  font-family: "Lato"
- }
-
+  font-family: "Lato";
+}

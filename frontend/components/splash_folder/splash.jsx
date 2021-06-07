@@ -57,6 +57,74 @@ class Splash extends React.Component {
             <img src={window.splash4} alt="splash image" />
           </li>
         </ul>
+        <div className="footer">
+          <div className="footer-description">
+            <h1> Splitvilla is a clone of Splitwise</h1>
+            <h4> This site is intended for demonstration only</h4>
+            <a
+              href="https://www.linkedin.com/in/mohammad-taher-2b502b5b"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className="footer-info-links"
+                icon={faLinkedin}
+              />
+            </a>
+            <a href="https://github.com/zohebtaher" target="_blank">
+              <FontAwesomeIcon
+                className="footer-info-links"
+                icon={faGithubSquare}
+              />
+            </a>
+          </div>
+
+          <ul className="footer-about">
+            <h3>About the engineer:</h3>
+            <li>
+              Mohammad Taher is a fullstack software engineer based in Toronto
+            </li>
+            <li>BS: Medical Radiation Science, University of Toronto , 2011</li>
+            <li>Graduate of App Academy- New York 2021</li>
+          </ul>
+          <ul className="footer-skills">
+            <h3>Skills</h3>
+            <li> React/Redux</li>
+            <li>JavaScript</li>
+            <li>PostgresSQL</li>
+            <li>Ruby on Rails</li>
+            <li>Ruby</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+          </ul>
+          <ul clasName="footer-projects">
+            <h3>Projects</h3>
+            <li>
+              <Link to="/">SplitVilla</Link>
+            </li>
+            <li>
+              <a
+                href="http://netzero-application.herokuapp.com/#/"
+                target="_blank"
+              >
+                NETZERO
+              </a>
+            </li>
+            <li>
+              <a href="https://zohebtaher.github.io/AbcTrace/" target="_blank">
+                Tracing Fun
+              </a>
+            </li>
+          </ul>
+          <ul className="footer-contact">
+            <h3>Contact</h3>
+            <li>Mohammad Taher</li>
+            <li>
+              <a href="mailto:zohebtaher@gmail.com?subject=Hey! I saw your Splitvilla app.">
+                zohebtaher@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
