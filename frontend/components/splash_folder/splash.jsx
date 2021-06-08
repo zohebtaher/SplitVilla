@@ -84,7 +84,7 @@ class Splash extends React.Component {
               Mohammad Taher is a fullstack software engineer based in Toronto
             </li>
             <li>BS: Medical Radiation Science, University of Toronto , 2011</li>
-            <li>Graduate of App Academy- New York 2021</li>
+            <li>Graduate of App Academy- New York, 2021</li>
           </ul>
           <ul className="footer-skills">
             <h3>Skills</h3>
