@@ -14,7 +14,10 @@ class EditBillForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processBill(this.props.billId, this.state).then(()=> this.props.getAllBills()).then(() => this.props.closeModal());
+    this.props
+      .processBill(this.props.billId, this.state)
+      .then(() => this.props.getAllBills())
+      .then(() => this.props.closeModal());
   }
 
   // handleSelect() {
@@ -64,10 +67,9 @@ class EditBillForm extends React.Component {
     return (
       <div className="form-errors">
         <h2>The following errors occured:</h2>
-       <ul>
-          <li>Enter a description please </li> 
-            <li>Enter an amount please</li>
-          
+        <ul>
+          <li>Enter a description please </li>
+          <li>Enter an amount please</li>
         </ul>
         <button
           className="button-orange"
@@ -82,7 +84,7 @@ class EditBillForm extends React.Component {
   render() {
     const { description, amount, lender_id, ower_id, friend, num, category } =
       this.state;
-    const billform = 
+    const billform = (
       <form onSubmit={this.handleSubmit} className="bill-form-modal">
         <div className="bill-form-inputs">
           <div className="bill-category">
@@ -111,6 +113,7 @@ class EditBillForm extends React.Component {
               value={description}
               placeholder="Enter a description"
             />
+            <br /> <br />
             <div className="amount-container">
               <p>$</p>
               <input
@@ -122,7 +125,7 @@ class EditBillForm extends React.Component {
             </div>
           </div>
         </div>
-
+        <br />
         <div className="bill-paid-info">
           <p>Paid by</p>
           <select
@@ -136,6 +139,7 @@ class EditBillForm extends React.Component {
           <p>and split equally.</p>
         </div>
         <p>(${num}/person)</p>
+        <br />
         <div className="modal-footer">
           <button onClick={this.props.closeModal}>Cancel</button>
           <button type="submit" className="button-green">
@@ -144,12 +148,9 @@ class EditBillForm extends React.Component {
         </div>
         {this.props.errors.length === 0 ? null : <div>{this.showErrors()}</div>}
       </form>
-    
-    return (
-      <div>
-        {billform}
-      </div>
     );
+
+    return <div>{billform}</div>;
   }
 }
 

@@ -90,7 +90,9 @@ class LoginForm extends React.Component {
                   Log in
                 </button>
                 <p className="or">or</p>
-                <button onClick={this.demoLogin}>Demo User</button>
+                <button className="demo-user" onClick={this.demoLogin}>
+                  Demo User
+                </button>
               </div>
             </form>
           </div>

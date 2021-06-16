@@ -68,9 +68,8 @@ class BillForm extends React.Component {
       <div className="form-errors">
         <h2>The following errors occured:</h2>
         <ul>
-          <li>Enter a description please </li> 
-            <li>Enter an amount please</li>
-          
+          <li>Enter a description please </li>
+          <li>Enter an amount please</li>
         </ul>
         <button
           className="button-orange"
@@ -107,6 +106,7 @@ class BillForm extends React.Component {
             </select>
             {/* categorySelect */}
           </div>
+          <br />
           <div className="bill-info">
             <input
               type="text"
@@ -114,6 +114,8 @@ class BillForm extends React.Component {
               value={description}
               placeholder="Enter a description"
             />
+            <br />
+            <br />
             <div className="amount-container">
               <p>$</p>
               <input
@@ -125,7 +127,7 @@ class BillForm extends React.Component {
             </div>
           </div>
         </div>
-
+        <br />
         <div className="bill-paid-info">
           <p>Paid by</p>
           <select
@@ -139,6 +141,7 @@ class BillForm extends React.Component {
           <p>and split equally.</p>
         </div>
         <p>(${num}/person)</p>
+        <br />
         <div className="modal-footer">
           <button onClick={this.props.closeModal}>Cancel</button>
           <button type="submit" className="button-green">
@@ -154,8 +157,10 @@ class BillForm extends React.Component {
           <h1>{this.props.formType}</h1>
           <button onClick={this.props.closeModal}>x</button>
         </section>
+        <br />
         <section className="modal-user-selector">
           <p>With you and:</p>
+          <br />
           <select
             className="selector"
             value={friend.friendId}

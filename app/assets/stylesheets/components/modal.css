@@ -20,9 +20,11 @@
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   border: 1px solid #bbb;
   position: relative;
+  overflow: auto;
+  padding: 20px 20px 20px 20px;
 }
 
-#invite-friend-modal {
+/* #invite-friend-modal {
   padding: 20px 25px;
   height: 236px;
   width: 510px;
@@ -34,4 +36,26 @@
   border: 1px solid #333;
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+} */
+
+.add-friend-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #48be9d;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #48be9d;
+  color: white;
