@@ -49,4 +49,10 @@
   margin-right: 5px;
   display: inline-block;
   font-family: "Lato";
+  cursor: pointer;
+}
+
+.button-orange:hover {
+  background-color: #c83400;
+  border-color: #c83400;
 }

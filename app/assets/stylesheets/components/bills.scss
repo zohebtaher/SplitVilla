@@ -53,4 +53,9 @@
   background: #d93455;
   padding: 6px 10px 6px 10px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.bill-index-item-button button:hover {
+  background: #b12944;
 }
