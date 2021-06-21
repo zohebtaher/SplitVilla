@@ -123,6 +123,11 @@ class Splash extends React.Component {
                 zohebtaher@gmail.com
               </a>
             </li>
+            <li>
+              <a href="https://zohebtaher.github.io/portfolio/" target="_blank">
+                Personal Website
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -50,32 +50,34 @@ export default (props) => {
     return (
       <li className="add-friend-flex">
         {otherUser.username}
-        <button
-          className="edit-profile-button"
-          onClick={() => {
-            dispatch(postFriendship(currentUserId, otherUser.id));
-            setTimeout(() => {
-              dispatch(closeModal());
-              dispatch(fetchFriendships(currentUserId));
-              dispatch(getCurrentUser(currentUserId));
-            }, 1000);
-          }}
-        >
-          Accept Request
-        </button>
-        <button
-          className="edit-profile-button"
-          onClick={() => {
-            dispatch(deleteFriendRequest(request[0].id));
-            setTimeout(() => {
-              dispatch(closeModal());
-              dispatch(fetchFriendships(currentUserId));
-              dispatch(getCurrentUser(currentUserId));
-            }, 1000);
-          }}
-        >
-          Reject Request
-        </button>
+        <div className="button-spacing">
+          <button
+            className="edit-profile-button"
+            onClick={() => {
+              dispatch(postFriendship(currentUserId, otherUser.id));
+              setTimeout(() => {
+                dispatch(closeModal());
+                dispatch(fetchFriendships(currentUserId));
+                dispatch(getCurrentUser(currentUserId));
+              }, 1000);
+            }}
+          >
+            Accept Request
+          </button>
+          <button
+            className="edit-profile-button"
+            onClick={() => {
+              dispatch(deleteFriendRequest(request[0].id));
+              setTimeout(() => {
+                dispatch(closeModal());
+                dispatch(fetchFriendships(currentUserId));
+                dispatch(getCurrentUser(currentUserId));
+              }, 1000);
+            }}
+          >
+            Reject Request
+          </button>
+        </div>
       </li>
     );
   } else if (
@@ -113,19 +115,21 @@ export default (props) => {
     return (
       <li className="add-friend-flex">
         {otherUser.username}
-        <button
-          className="edit-profile-button requested-button"
-          onClick={() => {
-            dispatch(deleteFriendRequest(request[0].id));
-            setTimeout(() => {
-              dispatch(closeModal());
-              dispatch(fetchFriendships(currentUserId));
-              dispatch(getCurrentUser(currentUserId));
-            }, 1000);
-          }}
-        >
-          <span className="requested">Requested</span>
-        </button>
+        <div className="button-spacing">
+          <button
+            className="edit-profile-button requested-button"
+            onClick={() => {
+              dispatch(deleteFriendRequest(request[0].id));
+              setTimeout(() => {
+                dispatch(closeModal());
+                dispatch(fetchFriendships(currentUserId));
+                dispatch(getCurrentUser(currentUserId));
+              }, 1000);
+            }}
+          >
+            <span className="requested">Requested</span>
+          </button>
+        </div>
       </li>
     );
   } else {
