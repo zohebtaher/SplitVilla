@@ -93,12 +93,12 @@ export default (props) => {
     return (
       <li className="add-friend-flex">
         {otherUser.username}
-        <button
-          className="edit-profile-button friend-button"
+        <p
+          className="edit-profile-button-friend-button"
           onClick={() => dispatch(closeModal())}
         >
           Friend
-        </button>
+        </p>
       </li>
     );
   } else if (
@@ -115,21 +115,15 @@ export default (props) => {
     return (
       <li className="add-friend-flex">
         {otherUser.username}
-        <div className="button-spacing">
-          <button
-            className="edit-profile-button requested-button"
-            onClick={() => {
-              dispatch(deleteFriendRequest(request[0].id));
-              setTimeout(() => {
-                dispatch(closeModal());
-                dispatch(fetchFriendships(currentUserId));
-                dispatch(getCurrentUser(currentUserId));
-              }, 1000);
-            }}
-          >
-            <span className="requested">Requested</span>
-          </button>
-        </div>
+        <p
+          className="edit-profile-button-friend-button"
+          onClick={() => dispatch(closeModal())}
+        >
+          Requested
+        </p>
+            
+          
+        
       </li>
     );
   } else {

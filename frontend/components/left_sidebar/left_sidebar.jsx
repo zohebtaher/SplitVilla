@@ -39,6 +39,7 @@ class LeftSidebar extends React.Component {
             <i className="fas fa-plus fa-sm"></i>add
           </a>
         </div>
+        <br />
         <div className="dashboard-links">
             <a
               href="https://www.linkedin.com/in/mohammad-taher-2b502b5b"
@@ -50,6 +51,7 @@ class LeftSidebar extends React.Component {
               <FontAwesomeIcon className="dash-links" icon={faGithubSquare} />
             </a>
           </div>
+          <br />
         <div className="friend Index">
           <Friendship />
         </div>

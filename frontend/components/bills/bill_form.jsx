@@ -130,14 +130,8 @@ class BillForm extends React.Component {
         <br />
         <div className="bill-paid-info">
           <p>Paid by</p>
-          <select
-            className="selector"
-            value={lender_id}
-            onChange={this.handleSwitch}
-          >
-            <option defaultValue={this.props.currentUserId}>you</option>
-            <option value={friend.friendId}>{friend.userName}</option>
-          </select>
+          <p className="payer-name">You</p>
+          <br />
           <p>and split equally.</p>
         </div>
         <p>(${num}/person)</p>

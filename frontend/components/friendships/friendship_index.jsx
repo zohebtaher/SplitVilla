@@ -12,7 +12,7 @@ class FriendsIndex extends React.Component {
     // debugger;
     return (
       <div className="my-friends-container">
-        <h1>My Friends</h1>
+        <h1 className="myfriends">My Friends</h1>
         <ul className="friends-Index">
           {this.props.friendships.map((friend) => {
             // debugger;

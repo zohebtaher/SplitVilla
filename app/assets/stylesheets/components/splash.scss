@@ -199,14 +199,14 @@
 }
 
 .footer h3 {
-  font-size: 33px;
+  font-size: 27px;
   font-weight: 700;
   // padding-left: 28px;
   font-family: "Lato";
 }
 
 .footer h1 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 100;
   // padding-left: 28px;
   font-family: "Lato";
@@ -214,7 +214,7 @@
 }
 
 .footer ul {
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 500;
   // padding-left: 28px;
   font-family: "Lato";
@@ -225,13 +225,13 @@
   display: flex;
   flex-direction: column;
   color: rgb(233, 233, 233);
-  font-size: 60px;
+  font-size: 30px;
 }
 .footer-description .footer-info-links {
   color: black;
 }
 .footer-description h4 {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   // padding-left: 28px;
   font-family: "Lato";
@@ -239,4 +239,9 @@
 
 .footer li {
   color: rgb(233, 233, 233);
+}
+
+a {
+  text-decoration: none;
+
 }

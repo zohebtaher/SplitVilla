@@ -25,6 +25,7 @@ const mSTP = (state, ownProps) => {
         ower_id: bill.owerId,
         split_equally: bill.splitEqually,
         lender_paid: bill.lenderPaid,
+        lender_name: bill.lenderName,
         lender_owed: bill.lenderOwed,
         ower_paid: bill.owerPaid,
         ower_owed: bill.owerOwed,

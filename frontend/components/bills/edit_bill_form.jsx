@@ -82,7 +82,7 @@ class EditBillForm extends React.Component {
   }
 
   render() {
-    const { description, amount, lender_id, ower_id, friend, num, category } =
+    const { description, amount, lender_name, ower_id, friend, num, category } =
       this.state;
     const billform = (
       <form onSubmit={this.handleSubmit} className="bill-form-modal">
@@ -128,14 +128,8 @@ class EditBillForm extends React.Component {
         <br />
         <div className="bill-paid-info">
           <p>Paid by</p>
-          <select
-            className="selector"
-            value={lender_id}
-            onChange={this.handleSwitch}
-          >
-            <option defaultValue={this.props.currentUserId}>you</option>
-            <option value={friend.friendId}>{friend.userName}</option>
-          </select>
+         <p className="payer-name">{lender_name}</p>
+         <br />
           <p>and split equally.</p>
         </div>
         <p>(${num}/person)</p>
