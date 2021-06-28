@@ -23,9 +23,7 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <div className="greetingbar-personal">
       <ul className="top-dashboard-right">
-        <li className="splitvilla-dashboard">
-          Splitvilla
-        </li>
+        <li className="splitvilla-dashboard">Splitvilla</li>
         <li>
           <Link to="/">
             <img height="26px" src={window.logo} />
@@ -37,6 +35,7 @@ const Greeting = ({ currentUser, logout }) => {
           <li>
             <p>Hello {currentUser.username}!</p>
           </li>
+
           <li>
             <button className="green-button" onClick={logout}>
               Log Out

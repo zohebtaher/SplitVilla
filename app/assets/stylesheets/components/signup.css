@@ -54,7 +54,8 @@
 }
 
 .orange-button:hover {
-  background-color: #ff652f;
+  background-color: #c53e11;
+  border-color: #c53e11;
 }
 
 .signup-form-container .orange-button {
@@ -166,4 +167,8 @@
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
+}
+
+.demo-user:hover {
+  background-color: #3e8571;
 }

@@ -13,10 +13,10 @@ export const calculateTotalOwed = (bills, userId) => {
   let total = 0;
 
   bills.forEach((bill) => {
-    if (userId === bill.groups[0].userId) {
-      total += parseFloat(bill.groups[1].owedAmount);
+    if (userId === bill.lenderId) {
+      total += parseFloat(bill.lenderOwed);
     } else {
-      total += parseFloat(bill.groups[0].owedAmount);
+      total += 0;
     }
   });
 
@@ -26,10 +26,11 @@ export const calculateTotalOwed = (bills, userId) => {
 export const calculateTotal = (bills, userId) => {
   let total = 0;
   bills.forEach((bill) => {
-    if (userId === bill.groups[0].userId) {
-      total += parseFloat(bill.groups[0].netBalance);
+    if (userId === bill.lenderId) {
+      total += parseFloat(bill.lenderPaid);
     } else {
-      total += parseFloat(bill.groups[1].netBalance);
+      total += 0;
     }
   });
+  return total.toFixed(2).toString();
 };

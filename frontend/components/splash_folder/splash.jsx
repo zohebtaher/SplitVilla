@@ -14,8 +14,8 @@ class Splash extends React.Component {
               Keep track of your shared expenses and balances with
               housemates,friends and family{" "}
             </h3>
-            <Link className="splash-signup" to="/signup">
-              <button>Sign up!</button>
+            <Link className="splash-button" to="/signup">
+              Sign up!
             </Link>
             <div className="my-info-links">
               <a
@@ -70,6 +70,7 @@ class Splash extends React.Component {
                 icon={faLinkedin}
               />
             </a>
+
             <a href="https://github.com/zohebtaher" target="_blank">
               <FontAwesomeIcon
                 className="footer-info-links"

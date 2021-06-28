@@ -1,13 +1,23 @@
-.right-sidebar-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 17px;
-
+.right-sidebar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 17px;
 }
 
-.myfriends{
-    font-size: 30px;
-    font-weight: bold;
+.myfriends {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header-rightsidebar {
+  font-size: 30px;
+  color: #ff652f;
+  font-weight: bold;
+}
+
+.expenses-header li {
+  font-size: 25px;
+  font-weight: bold;
 }
