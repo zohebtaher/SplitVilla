@@ -155,6 +155,10 @@ table {
   text-decoration: none;
 }
 
+.green-button:hover {
+  background-color: #ff652f;
+}
+
 body {
   font-family: "Lato";
 }

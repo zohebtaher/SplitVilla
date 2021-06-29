@@ -35,13 +35,11 @@
 }
 
 .leftbar-nav {
-  
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 200px;
-  
 }
 
 .left-dash-link {
@@ -55,18 +53,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 
-.dashboard-links .dash-links {
+.dash-links {
   color: #48be9d;
   font-size: 42px;
   border-bottom: 3px;
-  
 }
 
-.dashboard-links .dash-links :hover {
-  color: #54bfa1;
+.dash-links:hover {
+  color: #031812;
   padding-bottom: 3px;
   border-bottom: 0px;
   padding-top: 7px;

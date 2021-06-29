@@ -52,7 +52,7 @@ export default (props) => {
         {otherUser.username}
         <div className="button-spacing">
           <button
-            className="edit-profile-button"
+            className="request-button-accept"
             onClick={() => {
               dispatch(postFriendship(currentUserId, otherUser.id));
               setTimeout(() => {
@@ -65,7 +65,7 @@ export default (props) => {
             Accept Request
           </button>
           <button
-            className="edit-profile-button"
+            className="request-button-reject"
             onClick={() => {
               dispatch(deleteFriendRequest(request[0].id));
               setTimeout(() => {
@@ -121,9 +121,6 @@ export default (props) => {
         >
           Requested
         </p>
-            
-          
-        
       </li>
     );
   } else {

@@ -33,7 +33,7 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="greeting-right">
         <ul>
           <li>
-            <p>Hello {currentUser.username}!</p>
+            <p className="hello">Hello {currentUser.username}!</p>
           </li>
 
           <li>
