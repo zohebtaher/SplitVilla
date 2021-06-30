@@ -14,5 +14,6 @@ json.id @bill.id
     json.owerOwed @bill.ower_owed
     json.lenderName @bill.lender.username
     json.owerName @bill.ower.username
+    json.comments @bill.comments
     json.id @bill.id
     

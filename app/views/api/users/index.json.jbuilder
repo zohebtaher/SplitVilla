@@ -4,5 +4,6 @@
         json.username user.username
         json.email user.email
         json.requestsAsReceiver user.requests_as_receiver
+        json.comments user.comments
     end
 end

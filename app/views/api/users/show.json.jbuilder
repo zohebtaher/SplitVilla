@@ -6,3 +6,4 @@ json.friendCount @user.friends.length
 json.requestsAsRequestor @user.requests_as_requestor
 json.requestsAsReceiver @user.requests_as_receiver
 json.friendships @user.friendships
+json.comments @user.comments

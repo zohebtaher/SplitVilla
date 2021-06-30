@@ -38,6 +38,11 @@ class User < ApplicationRecord
             primary_key: :id,
             foreign_key: :ower_id,
             class_name: :Bill
+        
+        has_many :comments,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Comment
 
 
     def self.find_by_credentials(email, password)

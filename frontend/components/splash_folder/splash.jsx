@@ -97,7 +97,7 @@ class Splash extends React.Component {
             <li>HTML5</li>
             <li>CSS</li>
           </ul>
-          <ul clasName="footer-projects">
+          <ul className="footer-projects">
             <h3>Projects</h3>
             <li>
               <Link to="/">SplitVilla</Link>

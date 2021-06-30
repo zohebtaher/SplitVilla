@@ -18,4 +18,9 @@ class Bill < ApplicationRecord
         foreign_key: :ower_id,
         class_name: :User
 
+    has_many :comments,
+    primary_key: :id,
+    foreign_key: :bill_id,
+    class_name: :Comment
+
 end

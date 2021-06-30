@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :requests, only:[:create, :destroy]
     resources :friendships, only:[:create, :destroy]
     resources :bills, only:[:show, :index, :create, :destroy, :update]
+    resources :comments, only: [:show, :index, :create, :destroy]
   end
 
   root "static_pages#root"
