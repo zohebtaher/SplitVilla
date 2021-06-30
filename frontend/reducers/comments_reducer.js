@@ -6,13 +6,14 @@ import {
 
 const commentsReducer = (state = {}, action) => {
   Object.freeze(state);
+  let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_COMMENTS:
-      return Object.assign({}, state, action.comments);
+      return action.comments;
     case RECEIVE_COMMENT:
-      return Object.assign({}, state, action.comment);
+      newState[action.comment.id] = action.comment;
+      return newState;
     case REMOVE_COMMENT:
-      let newState = Object.assign({}, state);
       delete newState[action.comment.id];
       return newState;
     default:

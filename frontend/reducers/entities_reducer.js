@@ -4,6 +4,7 @@ import AllUsersReducer from "./all_users_reducer";
 import requestReducer from "./request_reducer";
 import friendshipReducer from "./friendship_reducer";
 import billsReducer from "./bills_reducer";
+import commentsReducer from "./comments_reducer";
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -11,6 +12,7 @@ const entitiesReducer = combineReducers({
   requests: requestReducer,
   friendships: friendshipReducer,
   bills: billsReducer,
+  comments: commentsReducer,
 });
 
 export default entitiesReducer;
