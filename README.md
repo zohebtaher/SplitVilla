@@ -54,11 +54,10 @@ def create
     end
 ```
 
-![splitvilla-friend](https://user-images.githubusercontent.com/37554840/124335723-47f1a580-db69-11eb-9cfe-494ca7411c31.gif)
+![chrome-friend2](https://user-images.githubusercontent.com/37554840/124335922-057c9880-db6a-11eb-8b2b-c6b2772e667f.gif)
 
 This allowed for the following associations which were used as conditionals in rendering the appropriate " Accept Request, Decline Request, Requested , Add Friend" buttons in the front end
 
-![chrome-friend2](https://user-images.githubusercontent.com/37554840/124335922-057c9880-db6a-11eb-8b2b-c6b2772e667f.gif)
 
 ```ruby
         has_many :requests_as_requestor,
