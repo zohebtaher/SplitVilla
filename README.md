@@ -17,6 +17,8 @@ SplitVilla was built with the following technologies:
 - Ruby on Rails to create a database, manage relations between data types and handle creation and deletion of records and associations
   - Rails v5.2.6
   - Ruby v2.5.1p57
+  
+![splitvilla-login](https://user-images.githubusercontent.com/37554840/124335338-f8f74080-db67-11eb-9443-641dbec01514.gif)
 
 # Friending
 
