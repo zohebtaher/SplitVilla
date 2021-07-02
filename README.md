@@ -54,6 +54,8 @@ def create
     end
 ```
 
+![splitvilla-friend](https://user-images.githubusercontent.com/37554840/124335723-47f1a580-db69-11eb-9cfe-494ca7411c31.gif)
+
 This allowed for the following associations which were used as conditionals in rendering the appropriate " Accept Request, Decline Request, Requested , Add Friend" buttons in the front end
 
 ```ruby
@@ -76,6 +78,7 @@ This allowed for the following associations which were used as conditionals in r
             through: :friendships,
             dependent: :destroy
 ```
+
 
 # Billing and Transactions
 
