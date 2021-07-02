@@ -94,3 +94,4 @@ Similar to friending a user can only create a bill when logged in and can only m
     json.owerName @bill.ower.username
     json.id @bill.id
 ```
+![splitvilla-milk (3)](https://user-images.githubusercontent.com/37554840/124336569-7fae1c80-db6c-11eb-8225-034bdfd2ca40.gif)
