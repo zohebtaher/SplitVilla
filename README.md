@@ -95,3 +95,38 @@ Similar to friending a user can only create a bill when logged in and can only m
     json.id @bill.id
 ```
 ![splitvilla-milk (3)](https://user-images.githubusercontent.com/37554840/124336569-7fae1c80-db6c-11eb-8225-034bdfd2ca40.gif)
+
+# Comments
+
+Comments are associated with a bill and only the lender and ower are allowed to comment on that bill. I was having trouble using ActiveRecord associations to connect the separate models and hence designed a system in the frontend that handled that logic
+
+```
+const mapStateToProps = (state, ownProps) => {
+  const { bill } = ownProps;
+  let billComments = [];
+  const allComments = Object.values(state.entities.comments);
+  allComments.forEach((comment) => {
+    if (
+      bill.id === comment.bill_id &&
+      (bill.lenderId === comment.author_id || bill.owerId === comment.author_id)
+    ) {
+      billComments.push(comment);
+    }
+  });
+
+  return {
+    currentUser: state.entities.users[state.session.id],
+    comments: billComments,
+    billId: bill.id,
+    currentUserId: state.session.id,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createComment: (comment) => dispatch(createComment(comment)),
+    deleteComment: (commentId) => dispatch(deleteComment(commentId)),
+    allComments: () => dispatch(allComments()),
+  };
+};
+```
