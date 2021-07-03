@@ -130,3 +130,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 ```
+![chrome-capture](https://user-images.githubusercontent.com/37554840/124337389-55f6f480-db70-11eb-99b0-382f71119fe8.gif)
+
+
